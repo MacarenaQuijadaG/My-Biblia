@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
   const capituloSelect = document.getElementById('capitulo');
   const versiculoContainer = document.getElementById('versiculo-container');
 
-  let libros = {}; // Definimos la variable global
+  let libros = {}; 
 
   // Cargar todos los libros de la biblia
   fetch('libros.json')
     .then(response => response.json())
     .then(data => {
-      libros = data; // Asignamos los datos a la variable global libros
+      libros = data; 
       // Agregar los libros al selector
       Object.keys(libros).forEach(libro => {
         const option = document.createElement('option');
