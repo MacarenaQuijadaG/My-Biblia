@@ -1,42 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biblia Reina Valera 1960</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <title>La Biblia</title>
+  <!-- Enlace a Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container my-5">
-    <header class="text-center mb-4">
-      <h1 class="display-4 fw-bold">📖 Biblia Reina Valera 1960</h1>
-      <p class="lead text-muted">Explora los libros y capítulos con facilidad.</p>
-    </header>
+  <h1><i class="fas fa-book icon"></i>La Santa Biblia</h1>
 
-    <div class="row">
-      <div class="col-md-4">
-        <div class="mb-3">
-          <label for="book" class="form-label">Selecciona un libro:</label>
-          <select id="book" class="form-select"></select>
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Contenedor para Libro -->
+      <div class="col-md-5 mb-3">
+        <div class="d-flex justify-content-center align-items-center">
+          <label for="libro" class="icon-label"><i class="fas fa-book-open icon"></i>Libro: </label>
+          <select id="libro">
+            <option value="">Selecciona un libro</option>
+          </select>
         </div>
-        <div class="mb-3">
-          <label for="chapter" class="form-label">Selecciona un capítulo:</label>
-          <select id="chapter" class="form-select"></select>
-        </div>
-        <button id="show" class="btn btn-primary w-100">Mostrar Versículos</button>
       </div>
 
-      <div class="col-md-8">
-        <div id="output" class="bg-light p-4 rounded shadow-sm">
-          <h2 class="h4 text-primary">Versículos:</h2>
-          <div id="verses" class="pt-2"></div>
+      <!-- Contenedor para Capítulo -->
+      <div class="col-md-5 mb-3">
+        <div class="d-flex justify-content-center align-items-center">
+          <label for="capitulo" class="icon-label"><i class="fas fa-chalkboard-teacher icon"></i>Capítulo: </label>
+          <select id="capitulo">
+            <option value="">Selecciona un capítulo</option>
+          </select>
         </div>
       </div>
     </div>
+
+    <div id="versiculo-container">
+      <p><i class="fas fa-quote-left icon"></i>Versículo aparecerá aquí.</p>
+    </div>
+
+    <footer>
+      <p><i class="fas fa-heart icon"></i>Creado con amor y fe.</p>
+    </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <!-- Scripts de Bootstrap y FontAwesome -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
