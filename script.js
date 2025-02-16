@@ -3,27 +3,26 @@ document.addEventListener("DOMContentLoaded", function() {
   const capituloSelect = document.getElementById('capitulo');
   const versiculoContainer = document.getElementById('versiculo-container');
 
-  let libros = {}; 
+  let textosBiblicos = {}; 
 
-  // Cargar todos los libros de la biblia
-  fetch('libros.json')
+  // Cargar los textos bíblicos desde un nuevo JSON
+  fetch('textos-biblicos.json')
     .then(response => response.json())
     .then(data => {
-      libros = data; 
-      // Agregar los libros al selector
-      Object.keys(libros).forEach(libro => {
+      textosBiblicos = data; 
+      Object.keys(textosBiblicos).forEach(libro => {
         const option = document.createElement('option');
         option.value = libro;
         option.textContent = libro;
         libroSelect.appendChild(option);
       });
     })
-    .catch(error => console.error('Error al cargar los libros:', error));
+    .catch(error => console.error('Error al cargar los textos:', error));
 
   libroSelect.addEventListener('change', function() {
     const libroSeleccionado = libroSelect.value;
     if (libroSeleccionado) {
-      cargarCapitulos(libroSeleccionado);
+      cargarSecciones(libroSeleccionado);
     }
   });
 
@@ -31,38 +30,37 @@ document.addEventListener("DOMContentLoaded", function() {
     const libroSeleccionado = libroSelect.value;
     const capituloSeleccionado = capituloSelect.value;
     if (libroSeleccionado && capituloSeleccionado) {
-      cargarVersiculos(libroSeleccionado, capituloSeleccionado);
+      mostrarTexto(libroSeleccionado, capituloSeleccionado);
     }
   });
 
-  function cargarCapitulos(libro) {
-    fetch(libros[libro]) // Cargar el archivo JSON del libro seleccionado
+  function cargarSecciones(libro) {
+    fetch(textosBiblicos[libro]) 
       .then(response => response.json())
       .then(data => {
-        capituloSelect.innerHTML = '<option value="">Seleccionar capítulo</option>';
-        const capitulos = Object.keys(data);
-        capitulos.forEach(capitulo => {
+        capituloSelect.innerHTML = '<option value="">Seleccionar sección</option>';
+        Object.keys(data).forEach(capitulo => {
           const option = document.createElement('option');
           option.value = capitulo;
-          option.textContent = `Capítulo ${capitulo}`;
+          option.textContent = `Sección ${capitulo}`;
           capituloSelect.appendChild(option);
         });
       })
-      .catch(error => console.error('Error al cargar los capítulos:', error));
+      .catch(error => console.error('Error al cargar las secciones:', error));
   }
 
-  function cargarVersiculos(libro, capitulo) {
-    fetch(libros[libro]) // Cargar el archivo JSON del libro seleccionado
+  function mostrarTexto(libro, capitulo) {
+    fetch(textosBiblicos[libro])
       .then(response => response.json())
       .then(data => {
-        const versiculos = data[capitulo];
-        versiculoContainer.innerHTML = ''; // Limpiar contenedor de versículos
-        Object.keys(versiculos).forEach(versiculo => {
+        const contenido = data[capitulo];
+        versiculoContainer.innerHTML = ''; 
+        Object.keys(contenido).forEach(versiculo => {
           const p = document.createElement('p');
-          p.textContent = `${versiculo}. ${versiculos[versiculo]}`;
+          p.textContent = `${versiculo}. ${contenido[versiculo]}`;
           versiculoContainer.appendChild(p);
         });
       })
-      .catch(error => console.error('Error al cargar los versículos:', error));
+      .catch(error => console.error('Error al cargar el texto:', error));
   }
 });
