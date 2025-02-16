@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(data => {
       textosBiblicos = data; 
-      Object.keys(textosBiblicos).forEach(libro => {
+      Object.keys({...textosBiblicos.antiguoTestamento, ...textosBiblicos.nuevoTestamento}).forEach(libro => {
         const option = document.createElement('option');
         option.value = libro;
         option.textContent = libro;
@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   function cargarSecciones(libro) {
-    fetch(textosBiblicos[libro]) 
+    const testamento = textosBiblicos.antiguoTestamento[libro] ? 'antiguoTestamento' : 'nuevoTestamento';
+    fetch(textosBiblicos[testamento][libro]) 
       .then(response => response.json())
       .then(data => {
         capituloSelect.innerHTML = '<option value="">Seleccionar sección</option>';
@@ -50,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function mostrarTexto(libro, capitulo) {
-    fetch(textosBiblicos[libro])
+    const testamento = textosBiblicos.antiguoTestamento[libro] ? 'antiguoTestamento' : 'nuevoTestamento';
+    fetch(textosBiblicos[testamento][libro])
       .then(response => response.json())
       .then(data => {
         const contenido = data[capitulo];
