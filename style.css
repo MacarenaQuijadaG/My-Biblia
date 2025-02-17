@@ -1,69 +1,98 @@
- /* Fondo degradado */
- body {
-  background: linear-gradient(to bottom, #8e44ad, #3498db);
+/* Estilos generales */
+.page {
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
   font-family: 'Arial', sans-serif;
+  color: #ecf0f1;
+  text-align: center;
   margin: 0;
   padding: 0;
-  color: #fff;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-h1 {
-  margin-top: 50px;
-  font-size: 2.5em;
-  font-weight: bold;
+/* Encabezado */
+.header {
+  background: #1abc9c;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header__title {
+  font-size: 2.2em;
   text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Estilo para los selectores */
-label {
-  font-size: 1.2em;
-  margin-right: 10px;
   font-weight: bold;
 }
 
-/* Estilos para los selectores */
-select {
-  padding: 10px;
-  font-size: 1em;
-  border-radius: 30px; 
-  border: 2px solid #8e44ad;
-  background-color: #fff;
-  color: #333;
-  width: 100%; 
+.header__icon {
+  margin-right: 10px;
 }
 
-select:focus {
-  outline: none;
-  border: 2px solid #3498db;
+/* Contenido principal */
+.content {
+  padding: 40px 0;
+  flex-grow: 1;
 }
 
-/* Estilo para el contenedor del versículo */
-#versiculo-container {
-  margin-top: 40px;
-  padding: 20px;
+.book, .chapter {
   background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.book__label, .chapter__label {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.book__select, .chapter__select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #1abc9c;
+  background: #fff;
+  color: #333;
+}
+
+/* Sección del versículo */
+.verse {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid #8e44ad;
   text-align: justify;
+  flex-grow: 1;
 }
 
-/* Agregar un toque especial al contenedor */
-#versiculo-container p {
-  font-size: 1.3em;
+.verse__text {
+  font-size: 1.4em;
   font-style: italic;
 }
 
-/* Iconos */
-.icon {
+.verse__icon {
   margin-right: 5px;
 }
 
-.icon-label {
-  font-size: 1.0em;
+/* Pie de página */
+.footer {
+  background: #1abc9c;
+  padding: 15px;
+  margin-top: auto;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer__text {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.footer__icon {
+  margin-right: 5px;
 }
