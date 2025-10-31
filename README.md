@@ -1,4 +1,4 @@
-# 📖 La Santa Biblia
+# 📖 La Santa Biblia 
 
 Este es un proyecto interactivo que permite a los usuarios seleccionar un libro y un capítulo de la Biblia para visualizar los versículos correspondientes. La interfaz está diseñada con Bootstrap y cuenta con iconos para mejorar la experiencia del usuario.
 
