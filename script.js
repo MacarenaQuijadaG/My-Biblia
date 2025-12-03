@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
       mostrarTexto(libroSeleccionado, capituloSeleccionado);
     }
   });
-
+// Carga de los libros 
   function cargarSecciones(libro) {
     const testamento = textosBiblicos.antiguoTestamento[libro] ? 'antiguoTestamento' : 'nuevoTestamento';
     fetch(textosBiblicos[testamento][libro]) 
