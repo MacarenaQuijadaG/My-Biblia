@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
       })
       .catch(error => console.error('Error al cargar las secciones:', error));
   }
-
+// muestra de los libros
   function mostrarTexto(libro, capitulo) {
     const testamento = textosBiblicos.antiguoTestamento[libro] ? 'antiguoTestamento' : 'nuevoTestamento';
     fetch(textosBiblicos[testamento][libro])
