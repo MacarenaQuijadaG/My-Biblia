@@ -30,7 +30,7 @@ Este es un proyecto interactivo que permite a los usuarios seleccionar un libro 
 3. **Abrir el archivo `index.html` en el navegador.**
 
 ## 🌐 Despliegue en GitHub Pages
-
+ 
 Si deseas ver el proyecto en línea, puedes configurarlo en **GitHub Pages**:
 
 1. Ir a **Settings** en tu repositorio.
