@@ -19,7 +19,7 @@ Este es un proyecto interactivo que permite a los usuarios seleccionar un libro 
 
 ## 📦 Instalación y Uso
 
-1. **Clonar el repositorio:**
+1. **Clonar el repositorio:**   
    ```bash
    git clone https://github.com/MacarenaQuijadaG/My-Biblia.git
    ```
