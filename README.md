@@ -13,7 +13,7 @@ Este es un proyecto interactivo que permite a los usuarios seleccionar un libro 
 
 - HTML5
 - CSS3 (con Bootstrap)
-- JavaScript (para la lógica interactiva)
+- JavaScript (para la lógica interactiva)   
 - FontAwesome(para los iconos)
 - JSON (almacenamiento de libros de la biblia)
 
