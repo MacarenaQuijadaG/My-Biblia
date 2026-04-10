@@ -42,7 +42,7 @@ Si deseas ver el proyecto en línea, puedes configurarlo en **GitHub Pages**:
 
 ![1](https://github.com/user-attachments/assets/efa9b84c-9c0f-4d8a-a0ca-26882cabdd1c)
 
-## 🤝 Contribuciones
+## 🤝 Contribuciones 
 
 ¡Las contribuciones son bienvenidas! Si deseas mejorar el proyecto:
 
