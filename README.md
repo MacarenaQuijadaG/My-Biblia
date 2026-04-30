@@ -24,7 +24,7 @@ Este es un proyecto interactivo que permite a los usuarios seleccionar un libro 
    git clone https://github.com/MacarenaQuijadaG/My-Biblia.git
    ```
 2. **Navegar al directorio del proyecto:**
-   ```bash 
+   ```bash. 
    cd My-Biblia
    ```
 3. **Abrir el archivo `index.html` en el navegador.**
