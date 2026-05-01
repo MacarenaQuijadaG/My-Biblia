@@ -4,7 +4,7 @@ Este es un proyecto interactivo que permite a los usuarios seleccionar un libro 
 
 ## 🚀 Características
 
-- 📚 Selección de libros y capítulos de la Biblia.
+- 📚 Selección de libros y capítulos de la Biblia. 
 - 🎨 Diseño moderno con Bootstrap.
 - 🔥 Animaciones y efectos visuales.
 - 📜 Versículos mostrados en un formato elegante y justificado.
@@ -20,7 +20,7 @@ Este es un proyecto interactivo que permite a los usuarios seleccionar un libro 
 ## 📦 Instalación y Uso
 
 1. **Clonar el repositorio:**   
-   ```bash
+   ```bash 
    git clone https://github.com/MacarenaQuijadaG/My-Biblia.git
    ```
 2. **Navegar al directorio del proyecto:**
