@@ -9,7 +9,7 @@ Este es un proyecto interactivo que permite a los usuarios seleccionar un libro 
 - 🔥 Animaciones y efectos visuales.
 - 📜 Versículos mostrados en un formato elegante y justificado.
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas.  
 
 - HTML5
 - CSS3 (con Bootstrap)
